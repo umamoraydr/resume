@@ -1,42 +1,132 @@
-      <div>
-        <h1>Uma Subramanian <span style="font-weight:600; font-size:14px; color:var(--muted)">— Senior Product Leader</span></h1>
-        <div class="sub">Inverness, IL • US Citizen</div>
-        <div class="contact" aria-label="contact details">
-          <div>📧 <a href="mailto:usubramanian@yahoo.com">usubramanian@yahoo.com</a></div>
-          <div>📱 <a href="tel:+18476919097">847-691-9097</a></div>
-          <div>🔗 <a href="https://www.linkedin.com/in/uxxsubramanian" target="_blank" rel="noopener">LinkedIn</a></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uma Subramanian — Senior Product Leader</title>
+  <meta name="description" content="Uma Subramanian — Senior product leader with 25+ years experience in healthcare product strategy, medical imaging, AI/ML, regulatory and customer engagement." />
+  <style>
+    :root{
+      --bg:#f7f8fb; --card:#fff; --muted:#6b7280; --accent:#0b5cff; --glass: rgba(11,92,255,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0b1220;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg),#ffffff); padding:32px;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:900px;margin:0 auto;}
+    header.card, section.card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:16px;}
+    header.grid{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .identity{display:flex; gap:16px; align-items:center}
+    /* profile image styling */
+    .photo{
+      width:86px; height:86px; border-radius:12px; overflow:hidden;
+      background:linear-gradient(135deg,var(--glass),transparent);
+      display:inline-flex; align-items:center; justify-content:center; font-weight:600; color:var(--accent);
+      flex:0 0 86px;
+    }
+    .photo img{width:100%; height:100%; object-fit:cover; display:block}
+    #initials{font-weight:600; color:var(--accent); font-size:18px; display:none; width:100%; height:100%; align-items:center; justify-content:center}
+    h1{margin:0;font-size:20px}
+    .sub{color:var(--muted); font-size:14px; margin-top:6px}
+    .contact{font-size:14px; color:var(--muted); display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    a{color:var(--accent); text-decoration:none}
+    .summary{margin-top:12px; font-size:15px; line-height:1.45}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; font-size:13px}
+    .chip{background:#f1f5ff; color:var(--accent); padding:6px 10px; border-radius:999px; font-weight:600}
+    .section-title{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+    .role{display:flex; justify-content:space-between; gap:12px; border-left:4px solid var(--glass); padding:12px; margin-bottom:10px; border-radius:8px; background:#fbfcff}
+    .role h3{margin:0;font-size:16px}
+    .employer{font-weight:700; color:#0b1330}
+    .dates{color:var(--muted); font-size:13px}
+    ul.bullets{margin:8px 0 0 18px}
+    .skills{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .skill{background:#eef2ff; padding:6px 8px; border-radius:6px; color:#1e3a8a; font-weight:600; font-size:13px}
+    .print{background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:600}
+    footer{font-size:13px; color:var(--muted); margin-top:10px; text-align:center}
+    @media(print){
+      body{padding:8mm}
+      .photo{display:none}
+      .print{display:none}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Uma Subramanian",
+    "jobTitle": "Senior Product Leader",
+    "email": "mailto:usubramanian@yahoo.com",
+    "telephone": "tel:+18476919097",
+    "url": "https://www.linkedin.com/in/uxxsubramanian",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Inverness",
+      "addressRegion": "IL",
+      "addressCountry": "US"
+    },
+    "description": "Senior leader with 25+ years of experience in product strategy, development and customer engagement focused on healthcare, medical imaging and AI/ML."
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="card">
+      <div class="grid">
+        <div class="identity">
+          <!-- Profile image: place your image at /images/profile.jpg in the repo.
+               Fallback to initials is implemented via onerror. -->
+          <div class="photo" aria-hidden="false">
+            <img src="images/profile.jpg" alt="Uma Subramanian" id="profileImg"
+                 onerror="this.style.display='none'; document.getElementById('initials').style.display='flex'">
+            <div id="initials" aria-hidden="true">US</div>
+          </div>
+
+          <div>
+            <h1>Uma Subramanian <span style="font-weight:600; font-size:14px; color:var(--muted)">— Senior Product Leader</span></h1>
+            <div class="sub">Inverness, IL • US Citizen</div>
+            <div class="contact" aria-label="contact details">
+              <div>📧 <a href="mailto:usubramanian@yahoo.com">usubramanian@yahoo.com</a></div>
+              <div>📱 <a href="tel:+18476919097">847-691-9097</a></div>
+              <div>🔗 <a href="https://www.linkedin.com/in/uxxsubramanian" target="_blank" rel="noopener">LinkedIn</a></div>
+            </div>
+            <div class="meta">
+              <div class="chip">25+ years</div>
+              <div class="chip">Healthcare & Medical Imaging</div>
+              <div class="chip">AI / ML • FDA • HIPAA</div>
+            </div>
+          </div>
         </div>
-        <div class="meta">
-          <div class="chip">25+ years</div>
-          <div class="chip">Healthcare & Medical Imaging</div>
-          <div class="chip">AI / ML • FDA • HIPAA</div>
+
+        <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
+          <button class="print" onclick="window.print()">Print / Save PDF</button>
+          <div style="font-size:12px; color:var(--muted)">Last updated: Nov 2025</div>
         </div>
       </div>
-    </div>
 
-    <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
-      <button class="print" onclick="window.print()">Print / Save PDF</button>
-      <div style="font-size:12px; color:var(--muted)">Last updated: Nov 2025</div>
-    </div>
+      <p class="summary">
+        Senior leader with 25+ years of experience in product strategy, development, and customer engagement.
+        Deep domain expertise in healthcare and medical devices, X‑ray systems, medical imaging workflows, and operational nuances in healthcare.
+        Proven track record with AI/ML technologies, including AI imaging features and radiology AI portfolios.
+      </p>
+    </header>
+
+    <!-- rest of resume unchanged (keep the full content you already had) -->
+    <section class="card" aria-labelledby="experience">
+      <div class="section-title" id="experience">
+        <h2 style="margin:0">💼 Professional Experience</h2>
+      </div>
+
+      <!-- entire experience / education / skills / case studies content goes here unchanged -->
+
+    </section>
+
+    <footer>
+      Built for quick sharing and printing. Source: supplied resume content.
+    </footer>
   </div>
-
-  <p class="summary">
-    Senior leader with 25+ years of experience in product strategy, development, and customer engagement.
-    Deep domain expertise in healthcare and medical devices, X‑ray systems, medical imaging workflows, and operational nuances in healthcare.
-    Proven track record with AI/ML technologies, including AI imaging features and radiology AI portfolios.
-  </p>
-</header>
-
-<!-- rest of resume unchanged -->
-<section class="card" aria-labelledby="experience">
-  <div class="section-title" id="experience">
-    <h2 style="margin:0">💼 Professional Experience</h2>
-  </div>
-
-  <!-- (content unchanged — omitted here for brevity in this block but keep full content when you paste) -->
-
-</section>
-
-<footer>
-  Built for quick sharing and printing. Source: supplied resume content.
-</footer>
+</body>
+</html>
