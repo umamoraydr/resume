@@ -20,7 +20,19 @@
     header.card, section.card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:16px;}
     header.grid{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap}
     .identity{display:flex; gap:16px; align-items:center}
-    .photo{width:86px; height:86px; border-radius:12px; background:linear-gradient(135deg,var(--glass),transparent); display:flex;align-items:center;justify-content:center; font-weight:600; color:var(--accent)}
+    .photo{
+      width:86px; 
+      height:86px; 
+      border-radius:12px; 
+      background:linear-gradient(135deg,var(--glass),transparent); 
+      overflow:hidden;
+      border:3px solid #f1f5ff;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
     h1{margin:0;font-size:20px}
     .sub{color:var(--muted); font-size:14px; margin-top:6px}
     .contact{font-size:14px; color:var(--muted); display:flex; gap:12px; flex-wrap:wrap; align-items:center}
@@ -40,7 +52,6 @@
     footer{font-size:13px; color:var(--muted); margin-top:10px; text-align:center}
     @media(print){
       body{padding:8mm}
-      .photo{display:none}
       .print{display:none}
     }
   </style>
@@ -69,7 +80,9 @@
     <header class="card">
       <div class="grid">
         <div class="identity">
-          <div class="photo" aria-hidden="true">US</div>
+          <div class="photo">
+            <img src="images/profile.jpg" alt="Uma Subramanian" />
+          </div>
           <div>
             <h1>Uma Subramanian <span style="font-weight:600; font-size:14px; color:var(--muted)">— Senior Product Leader</span></h1>
             <div class="sub">Inverness, IL • US Citizen</div>
