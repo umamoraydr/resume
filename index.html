@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Normative Reference Images - Pediatric Radiology | Uma Subramanian</title>
-  <meta name="description" content="Case study on developing normative reference images for pediatric radiology." />
+  <title>Uma S — Senior Product Leader</title>
+  <meta name="description" content="Uma Subramanian — Senior product leader with 25+ years experience in healthcare product strategy, medical imaging, AI/ML, regulatory and customer engagement." />
   <style>
     :root{
       --bg:#f7f8fb; --card:#fff; --muted:#6b7280; --accent:#0b5cff; --glass: rgba(11,92,255,0.06);
@@ -16,151 +16,277 @@
       margin:0; background:linear-gradient(180deg,var(--bg),#ffffff); padding:32px;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    .container{max-width:900px;margin:0 auto;}
-    .back-link{display:inline-flex; align-items:center; gap:8px; color:var(--accent); text-decoration:none; font-size:14px; margin-bottom:24px; font-weight:600;}
-    .back-link:hover{text-decoration:underline;}
-    .header{background:var(--card); border-radius:12px; padding:32px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:24px;}
-    .header h1{margin:0 0 12px 0; font-size:32px; line-height:1.2;}
-    .meta-tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;}
-    .tag{background:#eef2ff; padding:6px 12px; border-radius:6px; color:#1e3a8a; font-weight:600; font-size:13px;}
-    .section{background:var(--card); border-radius:12px; padding:28px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:20px;}
-    .section h2{margin:0 0 16px 0; font-size:24px; color:#0b1330; border-bottom:2px solid var(--glass); padding-bottom:12px;}
-    .section h3{margin:24px 0 12px 0; font-size:18px; color:#0b1330;}
-    .section p, .section ul{line-height:1.6; color:#37352f;}
-    .section ul{margin:12px 0 12px 20px;}
-    .section li{margin-bottom:8px;}
-    .highlight{background:#fff7d1; padding:2px 6px; border-radius:3px; font-weight:600;}
-    .callout{background:#f0f9ff; border-left:4px solid var(--accent); padding:16px; border-radius:8px; margin:20px 0;}
-    .callout strong{color:var(--accent);}
-    footer{font-size:13px; color:var(--muted); margin-top:32px; text-align:center;}
+    .container{max-width:1200px;margin:0 auto;}
+    .main-grid{display:grid; grid-template-columns:280px 1fr; gap:20px; align-items:start;}
+    
+    /* Sidebar */
+    .sidebar{position:sticky; top:32px;}
+    .sidebar .card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:16px;}
+    
+    /* Main content */
+    .main-content{}
+    header.card, section.card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(17,24,39,0.06); margin-bottom:16px;}
+    
+    header.grid{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .identity{display:flex; gap:16px; align-items:center}
+    .photo{
+      width:86px; 
+      height:86px; 
+      border-radius:12px; 
+      background:linear-gradient(135deg,var(--glass),transparent); 
+      overflow:hidden;
+      border:3px solid #f1f5ff;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    h1{margin:0;font-size:20px}
+    .sub{color:var(--muted); font-size:14px; margin-top:6px}
+    .contact{font-size:14px; color:var(--muted); display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    a{color:var(--accent); text-decoration:none}
+    .summary{margin-top:12px; font-size:15px; line-height:1.45}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; font-size:13px}
+    .chip{background:#f1f5ff; color:var(--accent); padding:6px 10px; border-radius:999px; font-weight:600}
+    .section-title{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+    .role{display:flex; justify-content:space-between; gap:12px; border-left:4px solid var(--glass); padding:12px; margin-bottom:10px; border-radius:8px; background:#fbfcff}
+    .role h3{margin:0;font-size:16px}
+    .employer{font-weight:700; color:#0b1330}
+    .dates{color:var(--muted); font-size:13px}
+    ul.bullets{margin:8px 0 0 18px}
+    .skills{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .skill{background:#eef2ff; padding:6px 8px; border-radius:6px; color:#1e3a8a; font-weight:600; font-size:13px}
+    .print{background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:600; font-size:13px}
+    footer{font-size:13px; color:var(--muted); margin-top:10px; text-align:center; grid-column: 1 / -1;}
+    
+    /* Sidebar specific styles */
+    .sidebar h2{font-size:16px; margin:0 0 12px 0;}
+    .sidebar .section-title h2{font-size:16px;}
+    .case-study-item{
+      padding:12px;
+      background:#fbfcff;
+      border-radius:8px;
+      margin-bottom:12px;
+      border-left:3px solid var(--glass);
+    }
+    .case-study-item h3{
+      font-size:14px;
+      margin:0 0 6px 0;
+      color:#0b1330;
+    }
+    .case-study-item p{
+      font-size:13px;
+      color:var(--muted);
+      margin:0;
+      line-height:1.4;
+    }
+    
+    @media(max-width: 900px){
+      .main-grid{grid-template-columns:1fr; gap:16px;}
+      .sidebar{position:relative; top:0;}
+    }
+    
+    @media(print){
+      body{padding:8mm}
+      .print{display:none}
+      .main-grid{grid-template-columns:1fr;}
+      .sidebar{display:none;}
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Uma Subramanian",
+    "jobTitle": "Senior Product Leader",
+    "email": "mailto:usubramanian@yahoo.com",
+    "telephone": "tel:+18476919097",
+    "url": "https://www.linkedin.com/in/uxxsubramanian",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Inverness",
+      "addressRegion": "IL",
+      "addressCountry": "US"
+    },
+    "description": "Senior leader with 25+ years of experience in product strategy, development and customer engagement focused on healthcare, medical imaging and AI/ML."
+  }
+  </script>
 </head>
 <body>
   <div class="container">
-    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    <div class="main-grid">
+      
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-title">
+            <h2>📚 Case Studies</h2>
+          </div>
+          <p style="color:var(--muted); margin:0 0 16px 0; font-size:13px;">Featured projects showcasing impact and methodology.</p>
+          
+          <div class="case-study-item">
+            <h3><a href="case-studies/pediatric-radiology.html" style="color:#0b1330; text-decoration:none;">Normative Reference Images - Pediatric Radiology</a></h3>
+            <p style="font-size:12px; color:var(--accent); margin-top:4px;">Click to view details →</p>
+          </div>
+          
+          <div class="case-study-item">
+            <h3>Coming Soon</h3>
+            <p>Cardiovascular AI Workflow Optimization</p>
+          </div>
+          
+          <div class="case-study-item">
+            <h3>Coming Soon</h3>
+            <p>NHS Teams Premium Adoption Strategy</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="section-title">
+            <h2>🛠️ Core Skills</h2>
+          </div>
+          <div class="skills">
+            <div class="skill">Product Strategy</div>
+            <div class="skill">AI/ML</div>
+            <div class="skill">HL7</div>
+            <div class="skill">DICOM</div>
+            <div class="skill">FHIR</div>
+            <div class="skill">Agile</div>
+            <div class="skill">User Research</div>
+            <div class="skill">People Leader</div>
+            <div class="skill">FDA</div>
+            <div class="skill">HIPAA</div>
+            <div class="skill">CE</div>
+            <div class="skill">EHR</div>
+            <div class="skill">FIGMA</div>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="card">
+          <div class="grid">
+            <div class="identity">
+              <div class="photo">
+                <img src="images/profile.jpg?v=2" alt="Uma Subramanian" />
+              </div>
+              <div>
+                <h1>Uma Subramanian <span style="font-weight:600; font-size:14px; color:var(--muted)">— Senior Product Leader</span></h1>
+                <div class="sub">Inverness, IL • US Citizen</div>
+                <div class="contact" aria-label="contact details">
+                  <div>📧 <a href="mailto:usubramanian@yahoo.com">usubramanian@yahoo.com</a></div>
+                  <div>📱 <a href="tel:+18476919097">847-691-9097</a></div>
+                  <div>🔗 <a href="https://www.linkedin.com/in/uxxsubramanian" target="_blank" rel="noopener">LinkedIn</a></div>
+                </div>
+                <div class="meta">
+                  <div class="chip">25+ years</div>
+                  <div class="chip">Healthcare & Medical Imaging</div>
+                  <div class="chip">AI / ML • FDA • HIPAA</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
+              <button class="print" onclick="window.print()">Print / Save PDF</button>
+              <div style="font-size:12px; color:var(--muted)">Last updated: Nov 2025</div>
+            </div>
+          </div>
+
+          <p class="summary">
+            Senior leader with 25+ years of experience in product strategy, development, and customer engagement.
+            Deep domain expertise in healthcare and medical devices, X‑ray systems, medical imaging workflows, and operational nuances in healthcare.
+            Proven track record with AI/ML technologies, including AI imaging features and radiology AI portfolios.
+          </p>
+        </header>
+
+        <section class="card" aria-labelledby="experience">
+          <div class="section-title" id="experience">
+            <h2 style="margin:0">💼 Professional Experience</h2>
+          </div>
+
+          <div class="role" aria-label="Elucid Bioimaging">
+            <div>
+              <div class="employer">Elucid Bioimaging • Senior Manager - Product</div>
+              <div class="dates">June 2024 – October 2025</div>
+              <ul class="bullets">
+                <li>Defined multi-year product vision, strategy and roadmap for SaaS products enabling accurate and efficient cardiovascular diagnosis — advanced visualization portfolio.</li>
+                <li>Senior advisor for AI imaging and advanced visualization features (1 of 5 medical imaging SMEs in a 100‑person company).</li>
+                <li>Partnered with clinical, engineering, advanced research, marketing, regulatory and sales teams to deliver market-ready and FDA-compliant products; led regulatory clearance for Digital/AI products.</li>
+                <li>Led cross-functional delivery of a joint wall–lumen editing project: 33% workflow improvement and 50% improvement in case turnaround time.</li>
+                <li>Made Build / Buy / Outsource decisions for specific product capabilities.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="role" aria-label="Microsoft Corporation">
+            <div>
+              <div class="employer">Microsoft Corporation • Senior Manager – Customer Engagements & Product</div>
+              <div class="dates">November 2020 – May 2023</div>
+              <ul class="bullets">
+                <li>Advised senior leadership on strategic business decisions and SaaS roadmaps resulting in 80%+ adoption rates for several features.</li>
+                <li>Guided strategic healthcare organizations on product strategy for operational efficiency with Microsoft SaaS and data transformations.</li>
+                <li>Secured major wins such as the UK's national healthcare provider adopting Teams premium for ~2.8M users.</li>
+                <li>Evaluated Build vs Partner approaches and identified strategic partners focused on clinical and business value.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="role" aria-label="GE Healthcare">
+            <div>
+              <div class="employer">GE Healthcare • Senior Technical Product Manager</div>
+              <div class="dates">November 2015 – February 2020</div>
+              <ul class="bullets">
+                <li>Evaluated in-house and third-party AI solutions for radiology AI portfolio supporting GE Universal Viewer (~$25M annual revenue).</li>
+                <li>Led Build / Buy / Acquire evaluations and maintained collaborations across clinical, regional, marketing and engineering teams to create multi-year PACS/Enterprise Imaging roadmaps.</li>
+                <li>Delivered high customer satisfaction at initial sites, enabling deployment planning for 35 additional sites by 2020.</li>
+                <li>Mentored teams on use case prioritization and requirements for agile delivery.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="role" aria-label="Siemens Healthcare">
+            <div>
+              <div class="employer">Siemens Healthcare • Engineering Lead</div>
+              <div class="dates">June 2005 – November 2015</div>
+              <ul class="bullets">
+                <li>Led delivery of a 4‑minute ultra‑fast cardiac imaging system and other imaging products with Siemens Science & Technology.</li>
+                <li>Led the Medical Economics Engine — an AI-driven operational economics engine using machine logs and predictive models to optimize cost, uptime, and resource utilization.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="role" aria-label="CVS/Aetna">
+            <div>
+              <div class="employer">CVS/Aetna • AI Product Manager</div>
+              <div class="dates">August 2020 – November 2020</div>
+            </div>
+          </div>
+
+          <div class="role" aria-label="GE and Tata">
+            <div>
+              <div class="employer">GE, Tata • Software Engineering Roles</div>
+              <div class="dates">June 1998 – May 2005</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="education">
+          <div class="section-title" id="education">
+            <h2 style="margin:0">🎓 Education</h2>
+          </div>
+          <div style="display:grid; gap:8px;">
+            <div><strong>MBA</strong> — Gies College of Business, University of Illinois, Urbana‑Champaign</div>
+            <div><strong>MSc • Physics</strong> — X‑Ray Crystallography, Bangalore University</div>
+            <div><strong>BSc • Electronics</strong> — Bangalore University</div>
+          </div>
+        </section>
+      </main>
+    </div>
     
-    <div class="header">
-      <h1>Normative Reference Images - Pediatric Radiology</h1>
-      <p style="color:var(--muted); font-size:16px; margin:8px 0 0 0;">[Add brief one-sentence description of the project]</p>
-      <div class="meta-tags">
-        <span class="tag">Pediatric Imaging</span>
-        <span class="tag">Medical AI</span>
-        <span class="tag">Radiology</span>
-        <span class="tag">[Add relevant tags]</span>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Project Overview</h2>
-      <p><strong>Brief Description:</strong> [Add 2-3 sentences describing what this project was about and why it mattered]</p>
-      
-      <h3>Key Details</h3>
-      <ul>
-        <li><strong>Timeline:</strong> [Add project timeline, e.g., "June 2024 - October 2024"]</li>
-        <li><strong>Company/Organization:</strong> [Add company name]</li>
-        <li><strong>Your Role:</strong> [Add your role, e.g., "Senior Product Manager, Technical Lead"]</li>
-        <li><strong>Team Size:</strong> [Add team composition, e.g., "Led cross-functional team of 8: 2 radiologists, 3 engineers, 2 data scientists, 1 UX designer"]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>The Challenge</h2>
-      <p>[Describe the problem you were solving. What was the pain point? What gap existed in the market or clinical workflow?]</p>
-      
-      <h3>Key Problems Addressed:</h3>
-      <ul>
-        <li>[Problem 1]</li>
-        <li>[Problem 2]</li>
-        <li>[Problem 3]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Your Role & Contribution</h2>
-      <p>[Describe what YOU specifically did on this project. What decisions did you make? What teams did you coordinate?]</p>
-      
-      <h3>Key Responsibilities:</h3>
-      <ul>
-        <li>[Responsibility 1 - be specific about YOUR contribution]</li>
-        <li>[Responsibility 2]</li>
-        <li>[Responsibility 3]</li>
-        <li>[Responsibility 4]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Solution & Approach</h2>
-      <p>[Describe the solution you developed. What methodology did you use? What technologies were involved?]</p>
-      
-      <h3>Technologies & Methods Used:</h3>
-      <ul>
-        <li><strong>Technology Stack:</strong> [e.g., "Python, TensorFlow, DICOM imaging, Cloud infrastructure"]</li>
-        <li><strong>Methodologies:</strong> [e.g., "Agile/Scrum, Human-centered design, Clinical validation protocols"]</li>
-        <li><strong>Tools:</strong> [e.g., "Jira, Figma, Azure DevOps"]</li>
-      </ul>
-
-      <h3>Key Phases:</h3>
-      <ul>
-        <li><strong>Phase 1:</strong> [Discovery/Research - what you did]</li>
-        <li><strong>Phase 2:</strong> [Design/Development - what you did]</li>
-        <li><strong>Phase 3:</strong> [Testing/Validation - what you did]</li>
-        <li><strong>Phase 4:</strong> [Launch/Deployment - what you did]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Key Outcomes & Impact</h2>
-      
-      <div class="callout">
-        <strong>Impact Summary:</strong> [One powerful sentence about the overall impact - this is your headline achievement]
-      </div>
-
-      <h3>Quantifiable Results:</h3>
-      <ul>
-        <li><span class="highlight">[X%]</span> improvement in [specific metric]</li>
-        <li><span class="highlight">[Y%]</span> reduction in [specific metric]</li>
-        <li><span class="highlight">$[Z]</span> in cost savings or revenue generated</li>
-        <li><span class="highlight">[N] users/hospitals/patients</span> impacted</li>
-      </ul>
-
-      <h3>Qualitative Outcomes:</h3>
-      <ul>
-        <li>[Outcome 1 - e.g., "Improved clinical confidence in pediatric diagnoses"]</li>
-        <li>[Outcome 2 - e.g., "Reduced need for repeat imaging"]</li>
-        <li>[Outcome 3 - e.g., "Enhanced training for radiology residents"]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Challenges & Learnings</h2>
-      
-      <h3>Key Challenges:</h3>
-      <ul>
-        <li><strong>Challenge 1:</strong> [Describe challenge and how you overcame it]</li>
-        <li><strong>Challenge 2:</strong> [Describe challenge and how you overcame it]</li>
-        <li><strong>Challenge 3:</strong> [Describe challenge and how you overcame it]</li>
-      </ul>
-
-      <h3>Key Learnings:</h3>
-      <ul>
-        <li>[Learning 1 - what would you do differently or what insight did you gain?]</li>
-        <li>[Learning 2]</li>
-        <li>[Learning 3]</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Regulatory & Compliance Considerations</h2>
-      <p>[If applicable: Describe any FDA, HIPAA, or regulatory aspects. How did you ensure compliance?]</p>
-      <ul>
-        <li>[Regulatory consideration 1]</li>
-        <li>[Regulatory consideration 2]</li>
-        <li>[Regulatory consideration 3]</li>
-      </ul>
-    </div>
-
     <footer>
-      <p>© 2025 Uma Subramanian • <a href="../index.html" style="color:var(--accent);">Back to Portfolio</a></p>
+      Built for quick sharing and printing. Source: supplied resume content.
     </footer>
   </div>
 </body>
