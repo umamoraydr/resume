@@ -83,8 +83,17 @@
     }
     
     @media(max-width: 900px){
-      .main-grid{grid-template-columns:1fr; gap:16px;}
-      .sidebar{position:relative; top:0;}
+      .main-grid {
+      grid-template-columns: 1fr;
+      }
+     .sidebar {
+      order: 2; /* Put sidebar second */
+      position: relative;
+      top: 0;
+      }
+    .main-content {
+    order: 1; /* Put main content first */
+    }
     }
     
     @media(print){
